@@ -1,0 +1,296 @@
+Will Anderson Jr.,EDGE,Alabama,6-3,268
+CJ Stroud,QB,Ohio State,6-3,215
+Bryce Young,QB,Alabama,5-10,204
+Jalen Carter,DL,Georgia,6-3,314
+Bijan Robinson,RB,Texas,6-0,221
+Tyree Wilson,EDGE,Texas Tech,6-6,271
+Christian Gonzalez,CB,Oregon,6-1,197
+Jaxon Smith-Njigba,WR,Ohio State,6-1,196
+Peter Skoronski,iOL,Northwestern,6-4,313
+Broderick Jones,OT,Georgia,6-5,311
+Paris Johnson Jr.,OT,Ohio State,6-6,313
+Joey Porter Jr.,CB,Penn State,6-3,193
+Devon Witherspoon,CB,Illinois,5-11,181
+Nolan Smith,EDGE,Georgia,6-2,238
+Myles Murphy,EDGE,Clemson,6-5,268
+Quentin Johnston,WR,TCU,6-3,208
+Darnell Wright,OT,Tennessee,6-5,333
+Jordan Addison,WR,Southern Cal,5-11,173
+Bryan Bresee,DL,Clemson,6-6,298
+Michael Mayer,TE,Notre Dame,6-4,249
+Dalton Kincaid,TE,Utah,6-4,246
+Deonte Banks,CB,Maryland,6-0,197
+Isaiah Foskey,EDGE,Notre Dame,6-5,264
+Calijah Kancey,DL,Pittsburgh,6-1,281
+Lukas Van Ness,EDGE,Iowa,6-5,272
+Cam Smith,CB,South Carolina,6-1,180
+Jahmyr Gibbs,RB,Alabama,5-11,199
+Keion White,EDGE,Georgia Tech,6-5,285
+Drew Sanders,LB,Arkansas,6-4,235
+Brian Branch,S,Alabama,6-0,190
+Jalin Hyatt,WR,Tennessee,6-0,176
+Dawand Jones,OT,Ohio State,6-8,374
+Zay Flowers,WR,Boston College,5-9,182
+O'Cyrus Torrence,iOL,Florida,6-5,330
+John Michael Schmitz,iOL,Minnesota,6-4,301
+Matthew Bergeron,OT,Syracuse,6-5,318
+Kelee Ringo,CB,Georgia,6-2,207
+Mazi Smith,DL,Michigan,6-3,323
+Anthony Richardson,QB,Florida,6-4,244
+Trenton Simpson,LB,Clemson,6-2,235
+Will Levis,QB,Kentucky,6-4,229
+Cody Mauch,iOL,North Dakota State,6-5,302
+DJ Turner,CB,Michigan,5-11,178
+Adetomiwa Adebawore,EDGE,Northwestern,6-2,282
+Tucker Kraft,TE,South Dakota State,6-5,254
+Darnell Washington,TE,Georgia,6-7,264
+Julius Brents,CB,Kansas State,6-3,198
+Will McDonald,EDGE,Iowa State,6-4,239
+Anton Harrison,OT,Oklahoma,6-4,315
+Steve Avila,iOL,TCU,6-4,332
+Gervon Dexter,DL,Florida,6-6,310
+Byron Young (TEN),EDGE,Tennessee,6-2,250
+Antonio Johnson,S,Texas A&M,6-2,198
+Devon Achane,RB,Texas A&M,5-9,188
+Jack Campbell,LB,Iowa,6-5,249
+Zach Charbonnet,RB,UCLA,6-0,214
+Joe Tippmann,iOL,Wisconsin,6-6,313
+Keeanu Benton,DL,Wisconsin,6-4,309
+Josh Downs,WR,North Carolina,5-9,171
+Luke Musgrave,TE,Oregon State,6-6,253
+Darius Rush,CB,South Carolina,6-2,198
+Derick Hall,EDGE,Auburn,6-3,254
+Rashee Rice,WR,SMU,6-1,204
+Daiyan Henley,LB,Washington State,6-0,225
+Cedric Tillman,WR,Tennessee,6-3,213
+Zach Harrison,EDGE,Ohio State,6-5,274
+Sam LaPorta,TE,Iowa,6-3,245
+Felix Anudike-Uzomah,EDGE,Kansas State,6-3,255
+BJ Ojulari,EDGE,LSU,6-2,248
+Hendon Hooker,QB,Tennessee,6-3,217
+Jartavius Martin,S,Illinois,5-11,194
+Kyu Blu Kelly,CB,Stanford,6-0,191
+Ji'Ayir Brown,S,Penn State,5-11,203
+Zacch Pickens,DL,South Carolina,6-4,291
+Jarrett Patterson,iOL,Notre Dame,6-5,306
+Owen Pappoe,LB,Auburn,6-0,225
+Sydney Brown,S,Illinois,5-10,211
+Olusegun Oluwatimi,iOL,Michigan,6-3,309
+Wanya Morris,OT,Oklahoma,6-5,307
+Tyler Scott,WR,Cincinnati,5-10,177
+Tuli Tuipulotu,DL,Southern Cal,6-3,266
+Kendre Miller,RB,TCU,5-11,215
+Emmanuel Forbes,CB,Mississippi State,6-1,166
+Luke Wypler,iOL,Ohio State,6-3,303
+Jaelyn Duncan,OT,Maryland,6-6,306
+Riley Moss,CB,Iowa,6-1,193
+Siaki Ika,DL,Baylor,6-3,335
+Tyjae Spears,RB,Tulane,5-10,201
+Marvin Mims,WR,Oklahoma,5-11,183
+Tyrique Stevenson,CB,Miami (FL),6-0,198
+Blake Freeland,OT,BYU,6-8,302
+DeMarvion Overshown,LB,Texas,6-3,229
+Chris Smith II,S,Georgia,5-11,192
+Jakorian Bennett,CB,Maryland,5-11,188
+Braeden Daniels,iOL,Utah,6-4,294
+Dylan Horton,EDGE,TCU,6-4,257
+Sean Tucker,RB,Syracuse,5-9,207
+Roschon Johnson,RB,Texas,6-0,219
+Jalen Redmond,DL,Oklahoma,6-2,291
+Daniel Scott,S,Cal,6-1,208
+Noah Sewell,LB,Oregon,6-2,246
+Jaylon Jones,CB,Texas A&M,6-2,200
+Andre Carter II,EDGE,Army,6-7,256
+Andrei Iosivas,WR,Princeton,6-3,205
+A.T. Perry,WR,Wake Forest,6-4,198
+Andrew Vorhees,iOL,Southern Cal,6-6,310
+Chase Brown,RB,Illinois,5-10,209
+Ali Gaye,EDGE,LSU,6-6,263
+Luke Schoonmaker,TE,Michigan,6-5,251
+Yaya Diaby,EDGE,Louisville,6-3,263
+Nick Herbig,LB,Wisconsin,6-2,240
+Nick Saldiveri,iOL,Old Dominion,6-6,318
+Clark Phillips III,CB,Utah,5-9,184
+JL Skinner,S,Boise State,6-4,209
+Zach Evans,RB,Mississippi,5-11,202
+Tank Bigsby,RB,Auburn,6-0,210
+Darrell Luter Jr.,CB,South Alabama,6-0,189
+McClendon Curtis,iOL,Chattanooga,6-6,324
+Ryan Hayes,OT,Michigan,6-6,298
+Jordan Battle,S,Alabama,6-1,209
+Hunter Luepke,TE,North Dakota State,6-1,230
+Jose Ramirez,EDGE,Eastern Michigan,6-2,242
+Jon Gaines,iOL,UCLA,6-4,303
+Rakim Jarrett,WR,Maryland,6-0,192
+Israel Abanikanda,RB,Pittsburgh,5-11,216
+Jaquelin Roy,DL,LSU,6-3,305
+Jammie Robinson,S,Florida State,5-11,191
+Cameron Mitchell,CB,Northwestern,5-11,191
+Brenton Cox Jr.,EDGE,Florida,6-4,250
+Henry To'o To'o,LB,Alabama,6-1,227
+Kayshon Boutte,WR,LSU,5-11,195
+Emil Ekiyor Jr.,iOL,Alabama,6-3,314
+Kenny McIntosh,RB,Georgia,6-0,204
+Carrington Valentine,CB,Kentucky,6-0,193
+Byron Young (BAMA),DL,Alabama,6-3,294
+MJ Anderson,EDGE,Iowa State,6-3,268
+Brandon Joseph,S,Notre Dame,6-0,202
+Charlie Jones,WR,Purdue,5-11,175
+Moro Ojomo,DL,Texas,6-3,292
+Alex Austin,CB,Oregon State,6-1,195
+Will Mallory,TE,Miami (FL),6-5,239
+DJ Johnson,EDGE,Oregon,6-4,260
+Ronnie Hickman,S,Ohio State,6-1,203
+Nick Broeker,iOL,Mississippi,6-4,305
+Ventrell Miller,LB,Florida,6-0,232
+Rezjohn Wright,CB,Oregon State,6-2,193
+Jake Haener,QB,Fresno State,6-0,207
+Dorian Williams,LB,Tulane,6-1,228
+Eric Gray,RB,Oklahoma,5-10,207
+Mike Morris,EDGE,Michigan,6-5,275
+Michael Wilson,WR,Stanford,6-2,213
+Jake Andrews,iOL,Troy,6-3,305
+Tyler Lacy,DL,Oklahoma State,6-4,279
+DeWayne McBride,RB,UAB,5-10,209
+Jayden Reed,WR,Michigan State,5-11,187
+Jonathan Mingo,WR,Mississippi,6-2,220
+Habakkuk Baldonado,EDGE,Pittsburgh,6-4,263
+Deuce Vaughn,RB,Kansas State,5-5,179
+Brandon Hill,S,Pittsburgh,5-10,193
+Evan Hull,RB,Northwestern,5-10,209
+Zack Kuntz,TE,Old Dominion,6-6,255
+Isaiah Land,EDGE,Florida A&M,6-4,236
+Jason Taylor II,S,Oklahoma State,6-0,204
+KJ Henry,EDGE,Clemson,6-4,251
+Mark Evans,iOL,AR-Pine Bluff,6-3,303
+Warren McClendon,OT,Georgia,6-4,306
+Kaevon Merriweather,S,Iowa,6-0,205
+Richard Gouraige,iOL,Florida,6-5,306
+Trey Palmer,WR,Nebraska,6-0,192
+Asim Richards,OT,North Carolina,6-4,309
+Juice Scruggs,iOL,Penn State,6-3,301
+Nic Jones,CB,Ball State,6-0,189
+Jaren Hall,QB,BYU,6-0,207
+Bryce Ford-Wheaton,WR,West Virginia,6-3,221
+Tyler Steen,OT,Alabama,6-6,321
+Nick Hampton,LB,Appalachian State,6-2,236
+Robert Beal Jr.,EDGE,Georgia,6-4,247
+Garrett Williams,CB,Syracuse,5-10,192
+Jerrod Clark,DL,Coastal Carolina,6-3,334
+Dante Stills,DL,West Virginia,6-4,286
+Cory Trice,S,Purdue,6-3,206
+Ivan Pace Jr.,LB,Cincinnati,5-11,231
+Payne Durham,TE,Purdue,6-5,253
+Deneric Prince,RB,Tulsa,6-0,216
+Keaton Mitchell,RB,East Carolina,5-8,179
+Joey Fisher,iOL,Shepherd,6-5,285
+Earl Bostick Jr.,OT,Kansas,6-6,309
+Parker Washington,WR,Penn State,5-10,204
+Max Duggan,QB,TCU,6-2,204
+Dontayvion Wicks,WR,Virginia,6-1,206
+Carter Warren,OT,Pittsburgh,6-5,311
+Chamarri Conner,S,Virginia Tech,6-0,202
+Jay Ward,S,LSU,6-1,188
+Cameron Young,DL,Mississippi State,6-3,304
+Sidy Sow,iOL,Eastern Michigan,6-5,323
+Chris Rodriguez,RB,Kentucky,6-0,217
+Xavier Hutchinson,WR,Iowa State,6-2,203
+SirVocea Dennis,LB,Pittsburgh,6-1,226
+Cameron Latu,TE,Alabama,6-4,242
+Dorian Thompson-Robinson,QB,UCLA,6-1,203
+Anthony Bradford,iOL,LSU,6-4,332
+Demarcco Hellams,S,Alabama,6-1,203
+Nathaniel Dell,WR,Houston,5-8,165
+Stetson Bennett IV,QB,Georgia,5-11,192
+Myles Brooks,CB,Louisiana Tech,6-1,201
+Puka Nacua,WR,BYU,6-2,201
+Tiyon Evans,RB,Louisville,5-10,225
+Colby Wooden,EDGE,Auburn,6-4,273
+Ronnie Bell,WR,Michigan,6-0,191
+Brent Laing,iOL,MN-Duluth,6-4,304
+Yasir Abdullah,LB,Louisville,6-1,237
+Davis Allen,TE,Clemson,6-5,245
+Eli Ricks,CB,Alabama,6-2,188
+Connor Galvin,OT,Baylor,6-7,293
+Elijah Higgins,WR,Stanford,6-3,235
+Mohamed Ibrahim,RB,Minnesota,5-8,203
+Tavius Robinson,EDGE,Mississippi,6-6,257
+Gervarrius Owens,S,Houston,6-0,195
+Josh Whyle,TE,Cincinnati,6-7,248
+Tre Tucker,WR,Cincinnati,5-9,182
+Anfernee Orji,LB,Vanderbilt,6-1,230
+Thomas Incoom,EDGE,Central Michigan,6-2,262
+Anthony Johnson,CB,Virginia,6-2,205
+Jalen Cropper,WR,Fresno State,5-11,172
+Tanner McKee,QB,Stanford,6-6,231
+Jaxson Kirkland,OT,Washington,6-7,321
+Eku Leota,EDGE,Auburn,6-3,252
+Shaka Heyward,LB,Duke,6-3,235
+Brenton Strange,TE,Penn State,6-4,253
+Keondre Coburn,DL,Texas,6-1,332
+Henry Bainivalu,iOL,Washington,6-6,306
+Xazavian Valladay,RB,Arizona State,6-0,198
+Demario Douglas,WR,Liberty,5-8,179
+Cam Brown,CB,Ohio State,6-0,199
+Rashad Torrence II,S,Florida,6-0,193
+Caleb Murphy,EDGE,Ferris State,6-3,254
+Travis Dye,RB,Southern Cal,5-10,201
+Michael Jefferson,WR,Louisiana,6-4,199
+Jason Brownlee,WR,Southern Miss,6-2,198
+SaRodorick Thompson,RB,Texas Tech,6-0,207
+Dalton Wagner,OT,Arkansas,6-8,320
+Tre'vius Hodges-Tomlinson,CB,TCU,5-8,178
+Noah Gindorff,TE,North Dakota State,6-6,263
+Jake Bobo,WR,UCLA,6-4,206
+Alex Forsyth,iOL,Oregon,6-4,303
+Cam Jones,LB,Indiana,6-1,226
+Isaiah McGuire,EDGE,Missouri,6-4,268
+Kyle Patterson,TE,Air Force,6-5,260
+Jordan Howden,S,Minnesota,6-0,203
+DJ Dale,DL,Alabama,6-1,302
+Kei'Trel Clark,CB,Louisville,5-10,181
+Derius Davis,WR,TCU,5-8,165
+Andre Jones,EDGE,Louisiana,6-5,248
+Nesta Jade Silvera,DL,Arizona State,6-2,304
+Jordan McFadden,OT,Clemson,6-2,303
+Jalen Graham,LB,Purdue,6-2,220
+Camerun Peoples,RB,Appalachian State,6-1,217
+Marte Mapu,S,Sacramento State,6-3,221
+BJ Thompson,EDGE,Stephen F. Austin,6-5,230
+Charlie Thomas,LB,Georgia Tech,6-3,216
+Leonard Taylor,TE,Cincinnati,6-5,250
+PJ Mustipher,DL,Penn State,6-4,320
+John Ojukwu,OT,Boise State,6-6,309
+Viliami Fehoko,EDGE,San Jose State,6-4,276
+Trey Dean,S,Florida,6-2,200
+Dontay Demus Jr.,WR,Maryland,6-3,212
+Ricky Stromberg,iOL,Arkansas,6-4,306
+Mekhi Blackmon,CB,Southern Cal,5-11,178
+Dee Winters,LB,TCU,5-11,227
+Jadon Haselwood,WR,Arkansas,6-2,217
+Malaesala Aumavae-Laulu,OT,Oregon,6-5,317
+Lonnie Phelps,EDGE,Kansas,6-2,244
+Karl Brooks,DL,Bowling Green,6-4,295
+Tavion Thomas,RB,Utah,6-0,237
+TJ Bass,iOL,Oregon,6-5,317
+Mohamoud Diabate,LB,Utah,6-4,220
+Tyreque Jones,S,Boise State,6-2,195
+Alan Ali,iOL,TCU,6-4,301
+Grant Dubose,WR,Charlotte,6-2,201
+Mekhi Garner,CB,LSU,6-2,212
+Blake Whiteheart,TE,Wake Forest,6-4,247
+Warren Ericson,iOL,Georgia,6-4,305
+Jeremy Banks,LB,Tennessee,6-1,232
+Kobie Turner,DL,Wake Forest,6-3,290
+Jerome Carvin,iOL,Tennessee,6-5,297
+Ochaun Mathis,EDGE,Nebraska,6-5,250
+Tyrus Wheat,EDGE,Mississippi State,6-2,263
+Jaiden Woodbey,S,Boston College,6-0,222
+Jovaughn Gwyn,iOL,South Carolina,6-2,297
+Lew Nichols,RB,Central Michigan,5-10,220
+Tashawn Manning,iOL,Kentucky,6-4,327
+Anthony Johnson Jr.,S,Iowa State,6-0,205
+Ikenna Enechukwu,EDGE,Rice,6-4,264
+Micah Baskerville,LB,LSU,6-1,221
+Starling Thomas V,CB,UAB,6-0,195
+D'Shawn Jamison,CB,Texas,5-10,185
