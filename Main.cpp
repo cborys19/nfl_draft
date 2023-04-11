@@ -179,6 +179,8 @@ void browseByPosition() {
 }
 
 void browseBySchool() {
+	// Currently uses a linear case-sensitive search to find players belonging to a given school
+
 	std::string key;
 	std::vector<std::shared_ptr<Player>> matches;
 
