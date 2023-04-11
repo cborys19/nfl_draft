@@ -96,7 +96,13 @@ void draft() {
 	std::cout << "Draft" << std::endl;
 }
 
-void searchByPosition() {
+void browseAll() {
+	for (auto player : players) {
+		player->printInfo();
+	}
+}
+
+void browseByPosition() {
 	int choice;
 	std::vector<std::string> offensive_positions{ "QB", "RB", "WR", "TE", "OT", "iOL" };
 	std::vector<std::string> defensive_positions{ "EDGE", "DL", "LB", "CB", "S" };
@@ -172,6 +178,38 @@ void searchByPosition() {
 	}
 }
 
+void browseBySchool() {
+	std::string key;
+	std::vector<std::shared_ptr<Player>> matches;
+
+	std::cout << "Enter school (case-sensitive; start each word with caps): ";
+
+	if (std::getline(std::cin, key)) {
+		for (const auto& player : players) {
+			if (player->getSchool() == key) {
+				matches.push_back(player);
+			}
+		}
+	}
+	else {
+		std::cin.clear();
+		std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
+		std::cout << std::endl;
+		std::cout << "Error: Please enter valid integer value" << std::endl;
+	}
+
+	std::cout << "RESULTS FOR " << key << std::endl;
+	std::cout << "--------------------------------------" << std::endl;
+	if (!matches.empty()) {
+		for (const auto match : matches) {
+			match->printInfo();
+		}
+	}
+	else {
+		std::cout << "No schools matched your query of: " << key << std::endl;
+	}
+}
+
 void playerViewer() {
 	int choice;
 
@@ -186,15 +224,13 @@ void playerViewer() {
 
 		switch (choice) {
 		case 1:
-			for (auto player : players) {
-				player->printInfo();
-			}
+			browseAll();
 			break;
 		case 2:
-			searchByPosition();
+			browseByPosition();
 			break;
 		case 3:
-			std::cout << "Browsing by School" << std::endl;
+			browseBySchool();
 			break;
 		default:
 			std::cout << "Please select a valid option" << std::endl;
