@@ -214,35 +214,40 @@ void browseBySchool() {
 
 void playerViewer() {
 	int choice;
+	bool runFlag = true;
+	while (runFlag) {
+		std::cout << "How would like to browse players?" << std::endl;
+		std::cout << "\t1. Browse All" << std::endl;
+		std::cout << "\t2. By Position" << std::endl;
+		std::cout << "\t3. By School" << std::endl;
+		std::cout << "\t9. Back to Main Menu" << std::endl;
+		std::cout << "\tSelect Option: ";
 
-	std::cout << "How would like to browse players?" << std::endl;
-	std::cout << "\t1. Browse All" << std::endl;
-	std::cout << "\t2. By Position" << std::endl;
-	std::cout << "\t3. By School" << std::endl;
-	std::cout << "\tSelect Option: ";
+		if (std::cin >> choice) {
+			std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
 
-	if (std::cin >> choice) {
-		std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
-
-		switch (choice) {
-		case 1:
-			browseAll();
-			break;
-		case 2:
-			browseByPosition();
-			break;
-		case 3:
-			browseBySchool();
-			break;
-		default:
-			std::cout << "Please select a valid option" << std::endl;
-		}		
-	}
-	else {
-		std::cin.clear();
-		std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
-		std::cout << std::endl;
-		std::cout << "Error: Please enter valid integer value" << std::endl;
+			switch (choice) {
+			case 1:
+				browseAll();
+				break;
+			case 2:
+				browseByPosition();
+				break;
+			case 3:
+				browseBySchool();
+				break;
+			case 9:
+				return;
+			default:
+				std::cout << "Please select a valid option" << std::endl;
+			}
+		}
+		else {
+			std::cin.clear();
+			std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
+			std::cout << std::endl;
+			std::cout << "Error: Please enter valid integer value" << std::endl;
+		}
 	}
 }
 
@@ -250,10 +255,11 @@ void mainMenu() {
 	int choice;
 	bool runFlag = true;
 
-	std::cout << "Welcome to the 2023 NFL Draft" << std::endl;
-	std::cout << "-----------------------------" << std::endl;
+	std::cout << "Welcome to the 2023 NFL Draft!" << std::endl;
+	//std::cout << "-----------------------------" << std::endl;
 	while (runFlag) {
 		std::cout << "\n\tMAIN MENU" << std::endl;
+		std::cout << "---------------------------------" << std::endl;
 		std::cout << "Please select what you wish to do" << std::endl;
 		std::cout << "\t1. Begin Draft" << std::endl;
 		std::cout << "\t2. Browse Players" << std::endl;
