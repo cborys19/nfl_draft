@@ -104,78 +104,92 @@ void browseAll() {
 
 void browseByPosition() {
 	int choice;
+	bool runFlag = true;
 	std::vector<std::string> offensive_positions{ "QB", "RB", "WR", "TE", "OT", "iOL" };
 	std::vector<std::string> defensive_positions{ "EDGE", "DL", "LB", "CB", "S" };
 
-	std::cout << "Would you like to browse by offense, defense, or specific position?" << std::endl;
-	std::cout << "\t1. Offense" << std::endl;
-	std::cout << "\t2. Defense" << std::endl;
-	std::cout << "\t3. Specific position" << std::endl;
-	std::cout << "\tSelect Option: ";
-	
-	if (std::cin >> choice) {
-		std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
-		std::cout << std::endl;
+	while (runFlag) {
+		std::cout << "Would you like to browse by offense, defense, or specific position?" << std::endl;
+		std::cout << "\t1. Offense" << std::endl;
+		std::cout << "\t2. Defense" << std::endl;
+		std::cout << "\t3. Specific position" << std::endl;
+		std::cout << "\t9. Back to Player Browsing Menu" << std::endl;
+		std::cout << "\tSelect Option: ";
 
-		if (choice == 1) {
-			// Searches the players vector for all players with an offensive position
+		if (std::cin >> choice) {
+			std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
+			std::cout << std::endl;
 
-			for (const auto& player : players) {
-				auto it = std::find(offensive_positions.begin(), offensive_positions.end(),
-					player->getPosition());
-				if (it != offensive_positions.end()) {
-					player->printInfo();
+			if (choice == 1) {
+				// Searches the players vector for all players with an offensive position
+
+				for (const auto& player : players) {
+					auto it = std::find(offensive_positions.begin(), offensive_positions.end(),
+						player->getPosition());
+					if (it != offensive_positions.end()) {
+						player->printInfo();
+					}
 				}
 			}
-		}
-		else if (choice == 2) {
-			// Searches the players vector for all players with a defensive position
+			else if (choice == 2) {
+				// Searches the players vector for all players with a defensive position
 
-			for (const auto& player : players) {
-				auto it = std::find(defensive_positions.begin(), defensive_positions.end(),
-					player->getPosition());
-				if (it != defensive_positions.end()) {
-					player->printInfo();
+				for (const auto& player : players) {
+					auto it = std::find(defensive_positions.begin(), defensive_positions.end(),
+						player->getPosition());
+					if (it != defensive_positions.end()) {
+						player->printInfo();
+					}
 				}
 			}
-		}
-		else if (choice == 3) {
-			// Prompts the user for a position to search by, searches the players vector for all
-			// players that match that position, loads those players into vector of matches, then
-			// returns each match to the user on-screen
+			else if (choice == 3) {
+				// Prompts the user for a position to search by, searches the players vector for all
+				// players that match that position, loads those players into vector of matches, then
+				// returns each match to the user on-screen
 
-			std::string posChoice;
+				std::string posChoice;
+				const std::string back = "BACK";
 
-			std::cout << "What position would you like to browse?" << std::endl;
-			std::cout << "\tValid positions: QB, RB, WR, TE, OT, iOL, EDGE, DL, LB, CB, S" << std::endl;
-			std::cout << "\tPosition: ";
+				std::cout << "What position would you like to browse?" << std::endl;
+				std::cout << "\tValid positions: QB, RB, WR, TE, OT, iOL, EDGE, DL, LB, CB, S" << std::endl;
+				std::cout << "\tEnter \"back\" to go back to Player Browsing Menu (case-insensitive)" << std::endl;
+				std::cout << "\tPosition: ";
 
-			if (std::cin >> posChoice) {
-				std::vector<std::shared_ptr<Player>> matches;
+				if (std::cin >> posChoice) {
+					// convert entered value to uppercase so that valid uppercase values are not affected
+					std::transform(posChoice.begin(), posChoice.end(), posChoice.begin(), std::toupper);
+					if (posChoice.compare(back) == 0) {
+						return;
+					}
 
-				std::copy_if(players.begin(), players.end(), std::back_inserter(matches),
-					[&posChoice](const std::shared_ptr<Player>& player) {
-						return player->getPosition() == posChoice;
-					});
-				
-				for (const auto& match : matches) {
-					match->printInfo();
+					std::vector<std::shared_ptr<Player>> matches;
+					std::copy_if(players.begin(), players.end(), std::back_inserter(matches),
+						[&posChoice](const std::shared_ptr<Player>& player) {
+							return player->getPosition() == posChoice;
+						});
+
+					for (const auto& match : matches) {
+						match->printInfo();
+					}
+				}
+				else {
+					std::cin.clear();
+					std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
+					std::cout << std::endl;
+					std::cout << "Error: Please enter valid integer value" << std::endl;
 				}
 			}
-			else {
-				std::cin.clear();
-				std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
-				std::cout << std::endl;
-				std::cout << "Error: Please enter valid integer value" << std::endl;
+			else if (choice == 9) {
+				return;
 			}
 		}
-	}
-	else {
-		std::cin.clear();
-		std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
-		std::cout << std::endl;
-		std::cout << "Error: Please enter valid integer value" << std::endl;
-	}
+		else {
+			std::cin.clear();
+			std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
+			std::cout << std::endl;
+			std::cout << "Error: Please enter valid integer value" << std::endl;
+		}
+	}	
 }
 
 void browseBySchool() {
