@@ -46,15 +46,8 @@ int Player::getWeight() { return this->m_weight; }
 void Player::setWeight(int weight) { this->m_weight; }
 
 void Player::printInfo() {
-	/*std::cout << "Rank: " << m_rank << std::endl;
-	std::cout << "Name: " << m_name << std::endl;
-	std::cout << "Position: " << m_position << std::endl;
-	std::cout << "School: " << m_school << std::endl;
-	std::cout << "Height: " << m_height << " in" << std::endl;
-	std::cout << "Weight: " << m_weight << " lbs" << std::endl << std::endl;*/
-
-	printf("%d. %s || %s || %s\n", this->m_rank, this->m_name.c_str(), 
-		this->m_position.c_str(), this->m_school.c_str());
+	printf("%d. %s || %s || %s || %d in. || %d lbs.\n", this->m_rank, this->m_name.c_str(), 
+		this->m_position.c_str(), this->m_school.c_str(), this->m_height, this->m_weight);
 }
 
 void Player::printStats() {
