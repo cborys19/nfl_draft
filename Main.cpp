@@ -213,7 +213,11 @@ void browseBySchool() {
 			}
 			else {
 				for (const auto& player : players) {
-					if (player->getSchool() == key) {
+					if (key.size() == player->getSchool().size() && 
+						std::equal(key.begin(), key.end(), player->getSchool().begin(),
+						[](char a, char b) -> bool {
+							return std::toupper(static_cast<unsigned char>(a)) == std::toupper(static_cast<unsigned char>(b));
+						})) {
 						matches.push_back(player);
 					}
 				}
