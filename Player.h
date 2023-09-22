@@ -4,6 +4,7 @@
 #include <string>
 #include <optional>
 #include <cstdio>
+#include <memory>
 
 #include "Stats.h"
 
@@ -21,13 +22,13 @@ private:
 
 	int m_weight; // pounds
 
-	std::optional<OffensiveStats*> m_offStats;
+	std::optional<std::shared_ptr<OffensiveStats>> m_offStats;
 
-	std::optional<DefensiveStats*> m_defStats;
+	std::optional<std::shared_ptr<DefensiveStats>> m_defStats;
 public:
 	Player();
 
-	Player(int, std::string, std::string, std::string, int, int, std::optional<OffensiveStats*>, std::optional<DefensiveStats*>);
+	Player(int, std::string, std::string, std::string, int, int, std::optional<std::shared_ptr<OffensiveStats>>, std::optional<std::shared_ptr<DefensiveStats>>);
 
 	int getRank();
 

@@ -32,14 +32,11 @@ void loadPlayers() {
 	else {
 		std::string line;
 
-		OffensiveStats* offStats = new OffensiveStats();
-		DefensiveStats* defStats = new DefensiveStats();
 		int rankCounter = 1, weight = 0, newHeight = 0;
 		std::string name, position, school, height;
 
 		while (getline(FILE, line)) {
 			std::istringstream ss(line); // istringstream is more efficient
-			//ss >> name >> position >> school >> height >> weight;
 			std::string value;
 			bool isName = true;
 
@@ -81,9 +78,9 @@ void loadPlayers() {
 				}				
 			}
 
-			//Player* player = new Player(rankCounter, name, position, school, newHeight, weight, offStats, defStats);
+			std::optional<std::shared_ptr<OffensiveStats>> offStats = std::make_shared<OffensiveStats>();
+			std::optional<std::shared_ptr<DefensiveStats>> defStats = std::make_shared<DefensiveStats>();
 			players.push_back(std::make_shared<Player>(rankCounter, name, position, school, newHeight, weight, offStats, defStats));
-
 			rankCounter += 1;
 		}
 
@@ -97,7 +94,7 @@ void draft() {
 }
 
 void browseAll() {
-	for (auto player : players) {
+	for (const auto& player : players) {
 		player->printInfo();
 	}
 }
@@ -105,8 +102,8 @@ void browseAll() {
 void browseByPosition() {
 	int choice;
 	bool runFlag = true;
-	std::vector<std::string> offensive_positions{ "QB", "RB", "WR", "TE", "OT", "iOL" };
-	std::vector<std::string> defensive_positions{ "EDGE", "DL", "LB", "CB", "S" };
+	const std::vector<std::string> offensive_positions{ "QB", "RB", "WR", "TE", "OT", "iOL" };
+	const std::vector<std::string> defensive_positions{ "EDGE", "DL", "LB", "CB", "S" };
 
 	while (runFlag) {
 		std::cout << "Would you like to browse by offense, defense, or specific position?" << std::endl;
@@ -164,7 +161,7 @@ void browseByPosition() {
 
 					std::vector<std::shared_ptr<Player>> matches;
 					std::copy_if(players.begin(), players.end(), std::back_inserter(matches),
-						[&posChoice](const std::shared_ptr<Player>& player) {
+						[&posChoice](const auto& player) {
 							return player->getPosition() == posChoice;
 						});
 
@@ -235,7 +232,7 @@ void browseBySchool() {
 	if (!matches.empty()) {
 		std::cout << "RESULTS FOR " << key << std::endl;
 		std::cout << "--------------------------------------" << std::endl;
-		for (const auto match : matches) {
+		for (const auto& match : matches) {
 			match->printInfo();
 		}
 	}

@@ -10,8 +10,8 @@ Player::Player() {}
 // Add stats once constructors for Stats class are outlined
 Player::Player(int rank, std::string name, std::string position,
 	std::string school, int height, int weight, 
-	std::optional<OffensiveStats*> offStats = std::nullopt,
-	std::optional<DefensiveStats*> defStats = std::nullopt) : 
+	std::optional<std::shared_ptr<OffensiveStats>> offStats,
+	std::optional<std::shared_ptr<DefensiveStats>> defStats) :
 	m_rank(rank), 
 	m_name(name),
 	m_position(position),
@@ -20,6 +20,7 @@ Player::Player(int rank, std::string name, std::string position,
 	m_weight(weight),
 	m_offStats(offStats),
 	m_defStats(defStats) {}
+
 
 int Player::getRank() { return this->m_rank; }
 
@@ -57,8 +58,9 @@ void Player::printStats() {
 	if (this->m_position == "QB" || this->m_position == "RB" || this->m_position == "WR" || this->m_position == "TE") {
 		std::cout << "2022 College Statistics" << std::endl;
 		std::cout << "-----------------------" << std::endl;
-		if (this->m_offStats.has_value())
+		if (this->m_offStats.has_value()) {
 			(*m_offStats)->printStats();
+		}
 	}
 	else if (this->m_position == "OT" || this->m_position == "iOL") {
 		std::cout << "NO STATS AVAILABLE" << std::endl;
@@ -67,8 +69,9 @@ void Player::printStats() {
 		this->m_position == "CB" || this->m_position == "S") {
 		std::cout << "2022 College Statistics" << std::endl;
 		std::cout << "-----------------------" << std::endl;
-		if (this->m_defStats.has_value())
+		if (this->m_defStats.has_value()) {
 			(*m_defStats)->printStats();
+		}
 	}
 }
 
@@ -78,7 +81,11 @@ void Player::clearData() {
 	this->m_position.clear();
 	this->m_school.clear();
 	this->m_height = 0;
-	this->m_weight = 0;
-	(*m_offStats)->clearData();
-	(*m_defStats)->clearData();
+	this->m_weight = 0;	
+	if (this->m_offStats.has_value()) {
+		(*m_offStats)->clearData();
+	}
+	if (this->m_defStats.has_value()) {
+		(*m_defStats)->clearData();
+	}
 }
