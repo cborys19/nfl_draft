@@ -33,7 +33,7 @@ std::string Player::getPosition() { return this->m_position; }
 
 void Player::setPosition(std::string position) { this->m_position = position; }
 
-std::string Player::getSchool() { return m_school; }
+std::string Player::getSchool() { return this->m_school; }
 
 void Player::setSchool(std::string school) { this->m_school = school; }
 
@@ -51,34 +51,34 @@ void Player::printInfo() {
 }
 
 void Player::printStats() {
-	std::cout << "Name: " << m_name << std::endl;
-	std::cout << "School: " << m_school << std::endl;
+	std::cout << "Name: " << this->m_name << std::endl;
+	std::cout << "School: " << this->m_school << std::endl;
 
-	if (m_position == "QB" || m_position == "RB" || m_position == "WR" || m_position == "TE") {
+	if (this->m_position == "QB" || this->m_position == "RB" || this->m_position == "WR" || this->m_position == "TE") {
 		std::cout << "2022 College Statistics" << std::endl;
 		std::cout << "-----------------------" << std::endl;
-		if (m_offStats.has_value())
+		if (this->m_offStats.has_value())
 			(*m_offStats)->printStats();
 	}
-	else if (m_position == "OT" || m_position == "iOL") {
+	else if (this->m_position == "OT" || this->m_position == "iOL") {
 		std::cout << "NO STATS AVAILABLE" << std::endl;
 	}
-	else if (m_position == "DL" || m_position == "EDGE" || m_position == "LB" ||
-			m_position == "CB" || m_position == "S") {
+	else if (this->m_position == "DL" || this->m_position == "EDGE" || this->m_position == "LB" ||
+		this->m_position == "CB" || this->m_position == "S") {
 		std::cout << "2022 College Statistics" << std::endl;
 		std::cout << "-----------------------" << std::endl;
-		if (m_defStats.has_value())
+		if (this->m_defStats.has_value())
 			(*m_defStats)->printStats();
 	}
 }
 
 void Player::clearData() {
-	m_rank = 0;
-	m_name.clear();
-	m_position.clear();
-	m_school.clear();
-	m_height = 0;
-	m_weight = 0;
+	this->m_rank = 0;
+	this->m_name.clear();
+	this->m_position.clear();
+	this->m_school.clear();
+	this->m_height = 0;
+	this->m_weight = 0;
 	(*m_offStats)->clearData();
 	(*m_defStats)->clearData();
 }

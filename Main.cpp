@@ -194,29 +194,43 @@ void browseByPosition() {
 
 void browseBySchool() {
 	// Currently uses a linear case-sensitive search to find players belonging to a given school
-
 	std::string key;
+	const std::string back = "BACK";
+	bool runFlag = true;
 	std::vector<std::shared_ptr<Player>> matches;
 
-	std::cout << "Enter school (case-sensitive; start each word with caps): ";
+	while (runFlag) {
+		std::cout << "Enter \"back\" to go back (case-insensitive)" << std::endl;
+		std::cout << "Enter school (case-sensitive; start each word with caps): ";
 
-	if (std::getline(std::cin, key)) {
-		for (const auto& player : players) {
-			if (player->getSchool() == key) {
-				matches.push_back(player);
+		if (std::getline(std::cin, key)) {
+			if (key.size() == back.size() &&
+				std::equal(key.begin(), key.end(), back.begin(), [](char a, char b) -> bool {
+					return std::toupper(static_cast<unsigned char>(a)) == std::toupper(static_cast<unsigned char>(b));
+					})) {
+				// case-insensitive check if user entered "back"
+				return;
+			}
+			else {
+				for (const auto& player : players) {
+					if (player->getSchool() == key) {
+						matches.push_back(player);
+					}
+				}
+				runFlag = false;
 			}
 		}
+		else {
+			std::cin.clear();
+			std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
+			std::cout << std::endl;
+			std::cout << "Error: Please enter valid integer value" << std::endl;
+		}
 	}
-	else {
-		std::cin.clear();
-		std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
-		std::cout << std::endl;
-		std::cout << "Error: Please enter valid integer value" << std::endl;
-	}
-
-	std::cout << "RESULTS FOR " << key << std::endl;
-	std::cout << "--------------------------------------" << std::endl;
+	
 	if (!matches.empty()) {
+		std::cout << "RESULTS FOR " << key << std::endl;
+		std::cout << "--------------------------------------" << std::endl;
 		for (const auto match : matches) {
 			match->printInfo();
 		}
