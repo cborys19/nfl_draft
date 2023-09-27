@@ -24,36 +24,36 @@ Player::Player(int rank, std::string name, std::string position,
 	m_defStats(defStats) {}
 
 
-int Player::getRank() { return this->m_rank; }
+int Player::getRank() const { return this->m_rank; }
 
 void Player::setRank(int rank) { this->m_rank = rank; }
 
-std::string Player::getName() { return this->m_name; }
+std::string Player::getName() const { return this->m_name; }
 
 void Player::setName(std::string name) { this->m_name = name; }
 
-std::string Player::getPosition() { return this->m_position; }
+std::string Player::getPosition() const { return this->m_position; }
 
 void Player::setPosition(std::string position) { this->m_position = position; }
 
-std::string Player::getSchool() { return this->m_school; }
+std::string Player::getSchool() const { return this->m_school; }
 
 void Player::setSchool(std::string school) { this->m_school = school; }
 
-int Player::getHeight() { return this->m_height; }
+int Player::getHeight() const { return this->m_height; }
 
 void Player::setHeight(int height) { this->m_height; }
 
-int Player::getWeight() { return this->m_weight; }
+int Player::getWeight() const { return this->m_weight; }
 
 void Player::setWeight(int weight) { this->m_weight; }
 
-void Player::printInfo() {
+void Player::printInfo() const {
 	printf("%d. %s || %s || %s || %d in. || %d lbs.\n", this->m_rank, this->m_name.c_str(), 
 		this->m_position.c_str(), this->m_school.c_str(), this->m_height, this->m_weight);
 }
 
-void Player::printStats() {
+void Player::printStats() const {
 	std::cout << "Name: " << this->m_name << std::endl;
 	std::cout << "School: " << this->m_school << std::endl;
 

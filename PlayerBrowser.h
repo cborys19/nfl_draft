@@ -18,13 +18,13 @@ private:
 
 	void sortPrompt(); // will ask the user what to sort by
 
-	//void sortBySchool();
+	void sortByPosition();
+	 
+	void sortBySchool();
 	
-	//void sortByHeight();
+	void sortByHeight();
 
-	//void sortByWeight();
-
-	//void sortByPosition();
+	void sortByWeight();
 
 	//void search(std::string&);
 
@@ -36,6 +36,4 @@ public:
 	void browseByPosition();
 
 	void browseBySchool();
-
-	//friend class Player; // load players from file Player class; this class can then use those Players
 };

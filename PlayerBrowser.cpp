@@ -1,10 +1,10 @@
 #include "PlayerBrowser.h"
 
 void PlayerBrowser::browseAll() {
-	std::cout << "hello" << std::endl;
 	for (const auto& player : playerObj.m_players) {
 		player->printInfo();
 	}
+	sortPrompt();
 }
 
 void PlayerBrowser::browseByPosition() {
@@ -149,22 +149,99 @@ void PlayerBrowser::browseBySchool() {
 	}
 }
 
-//void PlayerBrowser::sortBySchool() {
-//
-//}
-//
-//void PlayerBrowser::sortByHeight() {
-//
-//}
-//
-//void PlayerBrowser::sortByWeight() {
-//
-//}
-//
-//void PlayerBrowser::sortByPosition() {
-//
-//}
-//
+void PlayerBrowser::sortPrompt() {
+	std::string toSort;
+	const std::string NO = "NO";
+	const std::string YES = "YES";
+
+	std::cout << "Do you want to sort the list?" << std::endl;
+	std::cout << "Yes or No: ";
+	if (std::cin >> toSort) {
+		std::cout << std::endl;
+		std::transform(toSort.begin(), toSort.end(), toSort.begin(), std::toupper);
+		if (toSort == NO) {
+			return;
+		}
+		else {
+			int sortChoice;
+			bool runFlag = true;
+
+			while (runFlag) {
+				std::cout << "What would you like to sort by?" << std::endl;
+				std::cout << "-------------------------------" << std::endl;
+				std::cout << "1. Position" << std::endl;
+				std::cout << "2. School" << std::endl;
+				std::cout << "3. Height" << std::endl;
+				std::cout << "4. Weight" << std::endl;
+				std::cout << "\tChoice: ";
+
+				if (std::cin >> sortChoice) {
+					switch (sortChoice) {
+					case 1:
+						sortByPosition();
+						runFlag = false;
+						break;
+					case 2:
+						sortBySchool();
+						runFlag = false;
+						break;
+					case 3:
+						sortByHeight();
+						runFlag = false;
+						break;
+					case 4:
+						sortByWeight();
+						runFlag = false;
+						break;
+					default:
+						std::cout << "ERROR: Please enter a valid choice" << std::endl;
+					}					
+				}
+				else {
+					std::cin.clear();
+					std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
+					std::cout << std::endl;
+					std::cout << "Error: Please enter valid string value" << std::endl;
+				}
+			}
+		}
+	}
+	else {
+		std::cin.clear();
+		std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
+		std::cout << std::endl;
+		std::cout << "Error: Please enter valid string value" << std::endl;
+	}
+}
+
+void PlayerBrowser::sortByPosition() {
+	std::sort(playerObj.m_players.begin(), playerObj.m_players.end(), [](const std::shared_ptr<Player>& playerA, const std::shared_ptr<Player>& playerB) -> bool {
+		return playerA->getPosition() < playerB->getPosition();
+	});
+	std::cout << "PLAYERS NOW SORTED BY POSITION" << std::endl;
+}
+
+void PlayerBrowser::sortBySchool() {
+	std::sort(playerObj.m_players.begin(), playerObj.m_players.end(), [&](const std::shared_ptr<Player>& playerA, const std::shared_ptr<Player>& playerB) -> bool {
+		return playerA->getSchool() < playerB->getSchool();
+	});
+	std::cout << "PLAYERS NOW SORTED BY SCHOOL" << std::endl;
+}
+
+void PlayerBrowser::sortByHeight() {
+	std::sort(playerObj.m_players.begin(), playerObj.m_players.end(), [&](const std::shared_ptr<Player>& playerA, const std::shared_ptr<Player>& playerB) -> bool {
+		return playerA->getHeight() < playerB->getHeight();
+	});
+	std::cout << "PLAYERS NOW SORTED BY HEIGHT" << std::endl;
+}
+
+void PlayerBrowser::sortByWeight() {
+	std::sort(playerObj.m_players.begin(), playerObj.m_players.end(), [&](const std::shared_ptr<Player>& playerA, const std::shared_ptr<Player>& playerB) -> bool {
+		return playerA->getWeight() < playerB->getWeight();
+	});
+	std::cout << "PLAYERS NOW SORTED BY WEIGHT" << std::endl;
+}
+
 //void PlayerBrowser::search(std::string& key) {
 //
 //}

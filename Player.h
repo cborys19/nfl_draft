@@ -39,33 +39,33 @@ public:
 
 	Player(int, std::string, std::string, std::string, int, int, std::optional<std::shared_ptr<OffensiveStats>>, std::optional<std::shared_ptr<DefensiveStats>>);
 
-	int getRank();
+	int getRank() const;
 
 	void setRank(int);
 	
-	std::string getName();
+	std::string getName() const;
 
 	void setName(std::string);
 
-	std::string getPosition();
+	std::string getPosition() const;
 
 	void setPosition(std::string);
 
-	std::string getSchool();
+	std::string getSchool() const;
 
 	void setSchool(std::string);
 
-	int getHeight();
+	int getHeight() const;
 
 	void setHeight(int);
 
-	int getWeight();
+	int getWeight() const;
 
 	void setWeight(int);
 
-	void printInfo();
+	void printInfo() const;
 
-	void printStats();
+	void printStats() const;
 
 	void clearData();
 
