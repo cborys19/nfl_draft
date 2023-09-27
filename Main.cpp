@@ -24,6 +24,7 @@ void playerViewer() {
 		std::cout << "\t1. Browse All" << std::endl;
 		std::cout << "\t2. By Position" << std::endl;
 		std::cout << "\t3. By School" << std::endl;
+		std::cout << "\t4. Search for Specific Player" << std::endl;
 		std::cout << "\t9. Back to Main Menu" << std::endl;
 		std::cout << "\tSelect Option: ";
 
@@ -40,6 +41,8 @@ void playerViewer() {
 			case 3:
 				playerBrowser.browseBySchool();
 				break;
+			case 4:
+				playerBrowser.searchHandler();
 			case 9:
 				return;
 			default:

@@ -150,9 +150,7 @@ void PlayerBrowser::browseBySchool() {
 }
 
 void PlayerBrowser::sortPrompt() {
-	std::string toSort;
-	const std::string NO = "NO";
-	const std::string YES = "YES";
+	std::string toSort;	
 
 	std::cout << "Do you want to sort the list?" << std::endl;
 	std::cout << "Yes or No: ";
@@ -214,6 +212,76 @@ void PlayerBrowser::sortPrompt() {
 	}
 }
 
+void PlayerBrowser::searchHandler() {
+	std::string key, searchAgain;
+	bool runFlag = true;	
+	
+	while (runFlag) {
+		std::cout << "Enter the name of the player to search for: ";
+		if (std::getline(std::cin, key)) {
+			std::cout << std::endl;
+			if (search(key) < 0) {
+				std::cout << "Sorry, that player could not be found" << std::endl;
+				std::cout << "Search again?: ";
+				if (std::cin >> searchAgain) {
+					std::cout << std::endl;
+					std::transform(searchAgain.begin(), searchAgain.end(), searchAgain.begin(), std::toupper);
+					if (searchAgain == NO) {
+						runFlag = false;
+					}
+					else if(searchAgain == YES) {
+						std::cin.clear();
+						std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
+						std::cout << std::endl;
+						runFlag = true;
+					}
+					else {
+						std::cout << "Error: Please enter just yes or no (case-insensitive)" << std::endl;
+					}
+				}
+				else {
+					std::cin.clear();
+					std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
+					std::cout << std::endl;
+					std::cout << "Error: Please enter valid string value" << std::endl;
+				}
+			}
+			else {
+				std::cout << "Search again?: ";
+				if (std::cin >> searchAgain) {
+					std::cout << std::endl;
+					std::transform(searchAgain.begin(), searchAgain.end(), searchAgain.begin(), std::toupper);
+					if (searchAgain == NO) {
+						runFlag = false;
+					}
+					else if (searchAgain == YES) {
+						std::cin.clear();
+						std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
+						std::cout << std::endl;
+						runFlag = true;
+					}
+					else {
+						std::cout << "Error: Please enter just yes or no (case-insensitive)" << std::endl;
+					}
+				}
+				else {
+					std::cin.clear();
+					std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
+					std::cout << std::endl;
+					std::cout << "Error: Please enter valid string value" << std::endl;
+				}
+			}
+		}
+		else {
+			std::cin.clear();
+			std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
+			std::cout << std::endl;
+			std::cout << "Error: Please enter valid string value" << std::endl;
+		}
+	}
+	return;
+}
+
 void PlayerBrowser::sortByPosition() {
 	std::sort(playerObj.m_players.begin(), playerObj.m_players.end(), [](const std::shared_ptr<Player>& playerA, const std::shared_ptr<Player>& playerB) -> bool {
 		return playerA->getPosition() < playerB->getPosition();
@@ -242,6 +310,39 @@ void PlayerBrowser::sortByWeight() {
 	std::cout << "PLAYERS NOW SORTED BY WEIGHT" << std::endl;
 }
 
-//void PlayerBrowser::search(std::string& key) {
-//
-//}
+void PlayerBrowser::sortByName() {
+	std::sort(playerObj.m_players.begin(), playerObj.m_players.end(), [&](const std::shared_ptr<Player>& playerA, const std::shared_ptr<Player>& playerB) -> bool {
+		return playerA->getName() < playerB->getName();
+	});
+}
+
+int PlayerBrowser::search(std::string& key) {
+	// return 0 on success, -1 on failure
+	int left = 0;
+	int middle = 0;
+	int right = playerObj.m_players.size() - 1;
+	std::string currentName;
+	std::transform(key.begin(), key.end(), key.begin(), std::toupper);
+	
+	sortByName();
+
+	while (left <= right) {
+		middle = left + (right - left) / 2;
+		currentName = playerObj.m_players[middle]->getName();
+		std::transform(currentName.begin(), currentName.end(), currentName.begin(), std::toupper);
+		if (key == currentName) {
+			std::cout << "PLAYER FOUND" << std::endl;
+			std::cout << "------------" << std::endl;
+			playerObj.m_players[middle]->printInfo();
+			return 0;
+		}
+		else if (key > currentName) {
+			left = middle + 1;
+		}
+		else if (key < currentName) {
+			right = middle - 1;
+		}
+	}
+
+	return -1;
+}

@@ -26,7 +26,13 @@ private:
 
 	void sortByWeight();
 
-	//void search(std::string&);
+	void sortByName(); // used by search method to sort vector by name
+
+	int search(std::string&); // binary search by name
+
+	const std::string NO = "NO"; // used for user prompts
+
+	const std::string YES = "YES"; // used for user prompts
 
 public:
 	PlayerBrowser() = default;
@@ -36,4 +42,6 @@ public:
 	void browseByPosition();
 
 	void browseBySchool();
+
+	void searchHandler();
 };
