@@ -5,7 +5,9 @@
 
 #include "Player.h"
 
-Player::Player() {}
+Player::Player() {
+	loadPlayers();
+}
 
 // Add stats once constructors for Stats class are outlined
 Player::Player(int rank, std::string name, std::string position,
@@ -76,16 +78,81 @@ void Player::printStats() {
 }
 
 void Player::clearData() {
-	this->m_rank = 0;
-	this->m_name.clear();
-	this->m_position.clear();
-	this->m_school.clear();
-	this->m_height = 0;
-	this->m_weight = 0;	
-	if (this->m_offStats.has_value()) {
-		(*m_offStats)->clearData();
+	m_players.clear();
+}
+
+void Player::loadPlayers() {
+	std::fstream FILE;
+	FILE.open("players.txt", std::ios::in);
+	if (!FILE.is_open()) {
+		std::cout << "players.txt COULD NOT BE FOUND" << std::endl;
+		std::cout << "Sorry!" << std::endl;
+		exit(-1);
 	}
-	if (this->m_defStats.has_value()) {
-		(*m_defStats)->clearData();
+	else {
+		std::string line;
+
+		int rankCounter = 1, weight = 0, newHeight = 0;
+		std::string name, position, school, height;
+
+		while (getline(FILE, line)) {
+			std::istringstream ss(line); // istringstream is more efficient
+			std::string value;
+			bool isName = true;
+
+			while (getline(ss, value, ',')) {
+				try {
+					// Try block to test if value is completely an integer
+					// If an exception is NOT thrown, the value will be stored as the player's weight
+
+					if (value[1] != '-') // Test to differentiate between height and weight
+						weight = stoi(value);
+					else // Value is not currently the weight
+						throw std::invalid_argument("");
+				}
+				catch (...) {
+					if (value == "QB" || value == "RB" || value == "WR" || value == "TE" ||
+						value == "iOL" || value == "OT" || value == "EDGE" || value == "DL" ||
+						value == "CB" || value == "S" || value == "LB") { // Test if value = position
+						position = value;
+					}
+					else if (value[1] == '-') { // Test if value = height
+						newHeight = heightParser(value);
+					}
+					else if (isName) { // Test if value is name
+						/*
+							The first string value that will be read is the player's name, then their
+							school. Since this is a constant order, we can set a boolean flag to
+							switch between true and false whenever one of these is read since the
+							next one to be read will always be different (i.e. if name is read, then
+							the next string is guaranteed to be the school, and vice-versa)
+						*/
+
+						name = value;
+						isName = !isName;
+					}
+					else {
+						school = value;
+						isName = !isName;
+					}
+				}
+			}
+
+			std::optional<std::shared_ptr<OffensiveStats>> offStats = std::make_shared<OffensiveStats>();
+			std::optional<std::shared_ptr<DefensiveStats>> defStats = std::make_shared<DefensiveStats>();
+			m_players.push_back(std::make_shared<Player>(rankCounter, name, position, school, newHeight, weight, offStats, defStats));
+			rankCounter += 1;
+		}
+
+		FILE.close();
 	}
+
+}
+
+int Player::heightParser(const std::string& height) {
+	int feet, inches;
+	std::istringstream strstm(height);
+	char dash;
+	strstm >> feet >> dash >> inches;
+	return ((feet * 12) + inches);
 }

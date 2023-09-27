@@ -27,6 +27,9 @@
     <ClInclude Include="Stats.h">
       <Filter>Header Files\Headers</Filter>
     </ClInclude>
+    <ClInclude Include="PlayerBrowser.h">
+      <Filter>Header Files\Headers</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Player.cpp">
@@ -36,6 +39,9 @@
       <Filter>Source Files\impl</Filter>
     </ClCompile>
     <ClCompile Include="Main.cpp">
+      <Filter>Source Files\impl</Filter>
+    </ClCompile>
+    <ClCompile Include="PlayerBrowser.cpp">
       <Filter>Source Files\impl</Filter>
     </ClCompile>
   </ItemGroup>

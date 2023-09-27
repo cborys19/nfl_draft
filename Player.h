@@ -1,15 +1,24 @@
 #pragma once
 
 #include <iostream>
+#include <fstream>
 #include <string>
+#include <sstream>
 #include <optional>
 #include <cstdio>
 #include <memory>
+#include <vector>
 
 #include "Stats.h"
 
 class Player {
 private:
+	void loadPlayers();
+
+	int heightParser(const std::string&);
+
+	std::vector<std::shared_ptr<Player>> m_players;
+
 	int m_rank;
 
 	std::string m_name;
@@ -59,4 +68,6 @@ public:
 	void printStats();
 
 	void clearData();
+
+	friend class PlayerBrowser;
 };
