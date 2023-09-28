@@ -9,8 +9,10 @@
 
 #include "PlayerBrowser.h"
 #include "Stats.h"
+#include "StatFileBuilder.h"
 
 PlayerBrowser playerBrowser;
+StatFileBuilder statFileBuilder;
 
 void draft() {
 	std::cout << "Draft" << std::endl;
@@ -43,6 +45,7 @@ void playerViewer() {
 				break;
 			case 4:
 				playerBrowser.searchHandler();
+				break;
 			case 9:
 				return;
 			default:
@@ -69,6 +72,7 @@ void mainMenu() {
 		std::cout << "Please select what you wish to do" << std::endl;
 		std::cout << "\t1. Begin Draft" << std::endl;
 		std::cout << "\t2. Browse Players" << std::endl;
+		std::cout << "\t3. Enter Player Statistics" << std::endl;
 		std::cout << "\t9. Exit" << std::endl << std::endl;
 		std::cout << "\tSelect Option: ";
 
@@ -81,6 +85,9 @@ void mainMenu() {
 				break;
 			case 2:
 				playerViewer();
+				break;
+			case 3:
+				statFileBuilder.confirmationMenu();
 				break;
 			case 9:
 				std::cout << "Thanks for joining us. Exiting..." << std::endl;

@@ -70,4 +70,6 @@ public:
 	void clearData();
 
 	friend class PlayerBrowser;
+
+	friend class StatFileBuilder;
 };

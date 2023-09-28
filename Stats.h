@@ -32,47 +32,55 @@ protected:
 public:
 	OffensiveStats() = default;
 
-	OffensiveStats(int, int, std::optional<int>, std::optional<int>, std::optional<int>, 
+	/*OffensiveStats(int, int, std::optional<int>, std::optional<int>, std::optional<int>, 
 		std::optional<float>, std::optional<float>, std::optional<int>, std::optional<int>, 
-		std::optional<int>, std::optional<float>);
+		std::optional<int>, std::optional<float>);*/
 
-	int getRushingYards(); // Rushing yards getter
+	int getRushingYards() const; // Rushing yards getter
 
 	void setRushingYards(int); // Rushing yards setter
 
-	int getRushingTouchdowns(); // Rushing touchdown getter
+	int getRushingTouchdowns() const; // Rushing touchdown getter
 
 	void setRushingTouchdowns(int); // Rushing touchdown setter
 
-	std::optional<int> getPassingYards(); // Passing yard getter
+	std::optional<int> getPassingYards() const; // Passing yard getter
 
 	void setPassingYards(std::optional<int>); // Passing yard setter
 
-	std::optional<int> getInterceptions(); // Interception getter
+	std::optional<int> getPassingTouchdowns() const;
 
-	void setInterceptions(std::optional<int>); // Interception setter
+	void setPassingTouchdowns(std::optional<int>);
 
-	std::optional<float> getCompletionPercentage(); // Completion percentage getter
+	std::optional<int> getPassingInterceptions() const; // Interception getter
+
+	void setPassingInterceptions(std::optional<int>); // Interception setter
+
+	std::optional<float> getCompletionPercentage() const; // Completion percentage getter
 
 	void setCompletionPercentage(std::optional<float>); // Completion percentage setter
 
-	std::optional<float> getQBRating(); // QB rating getter
+	std::optional<float> getQBRating() const; // QB rating getter
 
 	void setQBRating(std::optional<float>); // QB rating setter
 
-	std::optional<int> getReceivingYards(); // Receiving yard getter
+	std::optional<int> getReceptions() const; // Receptions getter
+
+	void setReceptions(std::optional<int>); // Receptions setter
+
+	std::optional<int> getReceivingYards() const; // Receiving yard getter
 
 	void setReceivingYards(std::optional<int>); // Receiving yard setter
 
-	std::optional<int> getReceivingTouchdowns(); // Receiving touchdown getter
+	std::optional<int> getReceivingTouchdowns() const; // Receiving touchdown getter
 
 	void setReceivingTouchdowns(std::optional<int>); // Receiving touchdown setter
 
-	std::optional<float> getAverageYardage(); // Average yardage getter
+	std::optional<float> getAverageYardage() const; // Average yardage getter
 
 	void setAverageYardage(std::optional<float>); // Average yardage setter
 
-	void printStats(); // Print stats associated with given player
+	void printStats() const; // Print stats associated with given player
 
 	void clearData();
 };
@@ -93,27 +101,27 @@ public:
 
 	DefensiveStats(int, float, int, int, int);
 
-	int getTackles(); // Tackles getter
+	int getTackles() const; // Tackles getter
 	
 	void setTackles(int); // Tackles setter
 	
-	float getSacks(); // Sack getter
+	float getSacks() const; // Sack getter
 	
 	void setSacks(float); // Sack setter
 	
-	int getPassesDefended(); // Passes defended getter
+	int getPassesDefended() const; // Passes defended getter
 	
 	void setPassesDefended(int); // Passes defended setter
 	
-	int getInterceptions(); // Interception getter
+	int getInterceptions() const; // Interception getter
 	
 	void setInterceptions(int); // Interception setter
 	
-	int getForcedFumbles(); // Forced fumble getter
+	int getForcedFumbles() const; // Forced fumble getter
 	
 	void setForcedFumbles(int); // Forced fumble setter
 	
-	void printStats(); // Print states associated with a given player
+	void printStats() const; // Print states associated with a given player
 
 	void clearData();
 };
